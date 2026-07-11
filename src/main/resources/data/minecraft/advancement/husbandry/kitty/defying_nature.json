@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:golden_dandelion"
+    },
+    "title": "Defying Nature",
+    "description": "Stop the hands of time for one of nature's young.",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:husbandry/root",
+  "criteria": {
+    "kitty:freeze_baby_mob": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": "minecraft:golden_dandelion"
+        },
+        "entity": {
+          "nbt": "{AgeLocked:1b,Age:-24000}"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kitty:freeze_baby_mob"
+    ]
+  ],
+  "rewards": {
+    "experience": 100,
+    "function": "kitty:freeze_effects"
+  },
+  "sends_telemetry_event": true
+}

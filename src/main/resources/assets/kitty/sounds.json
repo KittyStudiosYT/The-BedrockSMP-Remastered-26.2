@@ -1,8 +1,8 @@
 {
-  "music.calm.thomas_soundtrack": {
+  "music.calm.echoes_in_motion": {
     "sounds": [
       {
-        "name": "kitty:music/calm/thomas_soundtrack",
+        "name": "kitty:music/calm/echoes_in_motion",
         "stream": true
       }
     ]

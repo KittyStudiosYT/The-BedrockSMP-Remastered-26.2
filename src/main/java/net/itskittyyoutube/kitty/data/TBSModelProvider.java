@@ -9,7 +9,6 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TexturedModel;
-import net.minecraft.world.level.block.Blocks;
 
 public class TBSModelProvider extends FabricModelProvider {
     public TBSModelProvider(FabricPackOutput output) {
@@ -195,9 +194,9 @@ public class TBSModelProvider extends FabricModelProvider {
         blockModelGenerators.woodProvider(TBSBlocks.GOLDEN_BIRCH_LOG).logUVLocked(TBSBlocks.GOLDEN_BIRCH_LOG).wood(TBSBlocks.GOLDEN_BIRCH_WOOD);
         blockModelGenerators.woodProvider(TBSBlocks.STRIPPED_GOLDEN_BIRCH_LOG).logUVLocked(TBSBlocks.STRIPPED_GOLDEN_BIRCH_LOG).wood(TBSBlocks.STRIPPED_GOLDEN_BIRCH_WOOD);
 
-        blockModelGenerators.createTrivialBlock(TBSBlocks.CHERRY_BIRCH_LEAVES, TexturedModel.LEAVES);
+        //blockModelGenerators.createTrivialBlock(TBSBlocks.CHERRY_BIRCH_LEAVES, TexturedModel.LEAVES);
         //blockModelGenerators.createPlantWithDefaultItem(TBSBlocks.CHERRY_BIRCH_SAPLING, null, BlockModelGenerators.PlantType.NOT_TINTED);
-        blockModelGenerators.createTrivialBlock(TBSBlocks.GOLDEN_BIRCH_LEAVES, TexturedModel.LEAVES);
+        //blockModelGenerators.createTrivialBlock(TBSBlocks.GOLDEN_BIRCH_LEAVES, TexturedModel.LEAVES);
         //blockModelGenerators.createPlantWithDefaultItem(TBSBlocks.GOLDEN_BIRCH_SAPLING, null, BlockModelGenerators.PlantType.NOT_TINTED);
 
         //blockModelGenerators.registerShelf(TheBedrockSMPBlocks.SHELFSHELF, TheBedrockSMPBlocks.BLUE_PLANKS);
@@ -216,6 +215,43 @@ public class TBSModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialBlock(TBSBlocks.GOLDEN_DEBRIS, TexturedModel.COLUMN);
 
         //blockModelGenerators.registerShelf(TBSBlocks.SHELFSHELF, TBSBlocks.BLUE_PLANKS);
+
+        blockModelGenerators.createShelf(TBSBlocks.SHELFSHELF, TBSBlocks.BLUE_PLANKS);
+
+        blockModelGenerators.createShelf(TBSBlocks.WHITE_SHELF, TBSBlocks.WHITE_PLANKS);
+        blockModelGenerators.createShelf(TBSBlocks.LIGHT_GRAY_SHELF, TBSBlocks.LIGHT_GRAY_PLANKS);
+        blockModelGenerators.createShelf(TBSBlocks.GRAY_SHELF, TBSBlocks.GRAY_PLANKS);
+        blockModelGenerators.createShelf(TBSBlocks.BLACK_SHELF, TBSBlocks.BLACK_PLANKS);
+        blockModelGenerators.createShelf(TBSBlocks.BROWN_SHELF, TBSBlocks.BROWN_PLANKS);
+        blockModelGenerators.createShelf(TBSBlocks.RED_SHELF, TBSBlocks.RED_PLANKS);
+        blockModelGenerators.createShelf(TBSBlocks.ORANGE_SHELF, TBSBlocks.ORANGE_PLANKS);
+        blockModelGenerators.createShelf(TBSBlocks.YELLOW_SHELF, TBSBlocks.YELLOW_PLANKS);
+        blockModelGenerators.createShelf(TBSBlocks.LIME_SHELF, TBSBlocks.LIME_PLANKS);
+        blockModelGenerators.createShelf(TBSBlocks.GREEN_SHELF, TBSBlocks.GREEN_PLANKS);
+        blockModelGenerators.createShelf(TBSBlocks.CYAN_SHELF, TBSBlocks.CYAN_PLANKS);
+        blockModelGenerators.createShelf(TBSBlocks.LIGHT_BLUE_SHELF, TBSBlocks.LIGHT_BLUE_PLANKS);
+        blockModelGenerators.createShelf(TBSBlocks.BLUE_SHELF, TBSBlocks.BLUE_PLANKS);
+        blockModelGenerators.createShelf(TBSBlocks.PURPLE_SHELF, TBSBlocks.PURPLE_PLANKS);
+        blockModelGenerators.createShelf(TBSBlocks.MAGENTA_SHELF, TBSBlocks.MAGENTA_PLANKS);
+        blockModelGenerators.createShelf(TBSBlocks.PINK_SHELF, TBSBlocks.PINK_PLANKS);
+
+        blockModelGenerators.createShelf(TBSBlocks.CHERRY_BIRCH_SHELF, TBSBlocks.STRIPPED_CHERRY_BIRCH_LOG);
+        blockModelGenerators.createShelf(TBSBlocks.GOLDEN_BIRCH_SHELF, TBSBlocks.STRIPPED_GOLDEN_BIRCH_LOG);
+
+        blockModelGenerators.family(TBSBlocks.CRIPTION_PLANKS)
+                .stairs(TBSBlocks.CRIPTION_STAIRS)
+                .slab(TBSBlocks.CRIPTION_SLAB)
+                .button(TBSBlocks.CRIPTION_BUTTON)
+                .pressurePlate(TBSBlocks.CRIPTION_PRESSURE_PLATE)
+                .fence(TBSBlocks.CRIPTION_FENCE)
+                .fenceGate(TBSBlocks.CRIPTION_FENCE_GATE);
+        blockModelGenerators.createDoor(TBSBlocks.CRIPTION_DOOR);
+        blockModelGenerators.createOrientableTrapdoor(TBSBlocks.CRIPTION_TRAPDOOR);
+
+        blockModelGenerators.woodProvider(TBSBlocks.CRIPTION_STEM).logUVLocked(TBSBlocks.CRIPTION_STEM).wood(TBSBlocks.CRIPTION_HYPHAE);
+        blockModelGenerators.woodProvider(TBSBlocks.STRIPPED_CRIPTION_STEM).logUVLocked(TBSBlocks.STRIPPED_CRIPTION_STEM).wood(TBSBlocks.STRIPPED_CRIPTION_HYPHAE);
+
+        blockModelGenerators.createShelf(TBSBlocks.CRIPTION_SHELF, TBSBlocks.STRIPPED_CRIPTION_STEM);
     }
 
     @Override
@@ -284,7 +320,7 @@ public class TBSModelProvider extends FabricModelProvider {
 
         itemModelGenerators.generateFlatItem(TBSItems.DUCT_TAPE, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerators.generateFlatItem(TBSItems.ENERGY, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(TBSItems.ENERGY_NUGGET, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(TBSItems.ENERGY_GEM, ModelTemplates.FLAT_ITEM);
 
         itemModelGenerators.generateFlatItem(TBSItems.DREADITE_GEM, ModelTemplates.FLAT_ITEM);

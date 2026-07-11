@@ -1,0 +1,34 @@
+
+    @Override
+    public ConfigScreenFactory<?> getModConfigScreenFactory() {
+        return parent -> {
+            ConfigBuilder builder = ConfigBuilder.create()
+                    .setParentScreen(parent)
+                    .setTitle(Component.translatable("modmenu.kitty.bmb_config"));
+
+            // Save callback - Make sure to call your config save method here!
+            builder.setSavingRunnable(() -> {
+                // TBSConfigs.save();
+            });
+
+            ConfigCategory general = builder.getOrCreateCategory(Component.translatable("modmenu.kitty.general"));
+            ConfigEntryBuilder entryBuilder = builder.entryBuilder();
+
+            // Left Click Toggle
+            general.addEntry(entryBuilder.startBooleanToggle(Component.translatable("modmenu.kitty.enable_left_click"), TBSConfigs.config.enableLeftClickHold)
+                    .setDefaultValue(false)
+                    .setTooltip(Component.translatable("modmenu.kitty.enable_left_click.desc"))
+                    .setSaveConsumer(newValue -> TBSConfigs.config.enableLeftClickHold = newValue)
+                    .build());
+
+            // Right Click Toggle
+            general.addEntry(entryBuilder.startBooleanToggle(Component.translatable("modmenu.kitty.enable_right_click"), TBSConfigs.config.enableRightClickHold)
+                    .setDefaultValue(false)
+                    .setTooltip(Component.translatable("modmenu.kitty.enable_right_click.desc"))
+                    .setSaveConsumer(newValue -> TBSConfigs.config.enableRightClickHold = newValue)
+                    .build());
+
+            return builder.build();
+        };
+    }
+}

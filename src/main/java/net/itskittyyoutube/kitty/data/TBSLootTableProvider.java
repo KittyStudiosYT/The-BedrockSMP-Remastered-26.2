@@ -2,7 +2,6 @@ package net.itskittyyoutube.kitty.data;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricLootTableSubProvider;
 import net.itskittyyoutube.kitty.block.TBSBlocks;
 import net.itskittyyoutube.kitty.item.TBSItems;
 import net.minecraft.core.HolderLookup;
@@ -11,7 +10,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
@@ -213,12 +211,14 @@ public class TBSLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(TBSBlocks.GOLDEN_BIRCH_PLANKS);
         //dropSelf(TBSBlocks.GOLDEN_BIRCH_SAPLING);
 
-        add(TBSBlocks.CHERRY_BIRCH_LEAVES, createLeavesDrops(TBSBlocks.CHERRY_BIRCH_LEAVES,
-                Blocks.CHERRY_SAPLING, 0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F));
-        add(TBSBlocks.GOLDEN_BIRCH_LEAVES, createLeavesDrops(TBSBlocks.GOLDEN_BIRCH_LEAVES,
-                Blocks.CHERRY_SAPLING, 0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F));
+        //add(TBSBlocks.CHERRY_BIRCH_LEAVES, createLeavesDrops(TBSBlocks.CHERRY_BIRCH_LEAVES,
+                //Blocks.CHERRY_SAPLING, 0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F));
+        //add(TBSBlocks.GOLDEN_BIRCH_LEAVES, createLeavesDrops(TBSBlocks.GOLDEN_BIRCH_LEAVES,
+                //Blocks.CHERRY_SAPLING, 0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F));
 
         //add(TheBedrockSMPBlocks.SHELFSHELF);
+
+        dropSelf(TBSBlocks.SHELFSHELF);
 
         dropSelf(TBSBlocks.DIAMARITE_BLOCK);
         dropSelf(TBSBlocks.CORRUPTIONITE_BLOCK);
@@ -236,6 +236,43 @@ public class TBSLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(TBSBlocks.ENERGY_BLOCK);
 
         dropSelf(TBSBlocks.GOLDEN_DEBRIS);
+
+        dropSelf(TBSBlocks.WHITE_SHELF);
+        dropSelf(TBSBlocks.LIGHT_GRAY_SHELF);
+        dropSelf(TBSBlocks.GRAY_SHELF);
+        dropSelf(TBSBlocks.BLACK_SHELF);
+        dropSelf(TBSBlocks.BROWN_SHELF);
+        dropSelf(TBSBlocks.RED_SHELF);
+        dropSelf(TBSBlocks.ORANGE_SHELF);
+        dropSelf(TBSBlocks.YELLOW_SHELF);
+        dropSelf(TBSBlocks.LIME_SHELF);
+        dropSelf(TBSBlocks.GREEN_SHELF);
+        dropSelf(TBSBlocks.CYAN_SHELF);
+        dropSelf(TBSBlocks.LIGHT_BLUE_SHELF);
+        dropSelf(TBSBlocks.BLUE_SHELF);
+        dropSelf(TBSBlocks.PURPLE_SHELF);
+        dropSelf(TBSBlocks.MAGENTA_SHELF);
+        dropSelf(TBSBlocks.PINK_SHELF);
+
+        dropSelf(TBSBlocks.CHERRY_BIRCH_SHELF);
+        dropSelf(TBSBlocks.GOLDEN_BIRCH_SHELF);
+
+        dropSelf(TBSBlocks.CRIPTION_PLANKS);
+        dropSelf(TBSBlocks.CRIPTION_STAIRS);
+        add(TBSBlocks.CRIPTION_SLAB, this::createSlabItemTable);
+        dropSelf(TBSBlocks.CRIPTION_FENCE);
+        dropSelf(TBSBlocks.CRIPTION_FENCE_GATE);
+        add(TBSBlocks.CRIPTION_DOOR, this::createDoorTable);
+        dropSelf(TBSBlocks.CRIPTION_TRAPDOOR);
+        dropSelf(TBSBlocks.CRIPTION_PRESSURE_PLATE);
+        dropSelf(TBSBlocks.CRIPTION_BUTTON);
+
+        dropSelf(TBSBlocks.CRIPTION_STEM);
+        dropSelf(TBSBlocks.CRIPTION_HYPHAE);
+        dropSelf(TBSBlocks.STRIPPED_CRIPTION_STEM);
+        dropSelf(TBSBlocks.STRIPPED_CRIPTION_HYPHAE);
+
+        dropSelf(TBSBlocks.CRIPTION_SHELF);
     }
 
     public LootTable.Builder createMultipleOreDrops(final Block block, Item item, float minDrops, float maxDrops) {

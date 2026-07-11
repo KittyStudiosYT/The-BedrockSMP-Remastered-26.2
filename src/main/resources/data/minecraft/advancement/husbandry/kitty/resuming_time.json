@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:clock"
+    },
+    "title": "Resuming Time",
+    "description": "Allow a frozen youth to grow up at last.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:husbandry/kitty/defying_nature",
+  "criteria": {
+    "kitty:unfreeze_baby_mob": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": "minecraft:golden_dandelion"
+        },
+        "entity": {
+          "nbt": "{AgeLocked:0b,Age:-24000}"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kitty:unfreeze_baby_mob"
+    ]
+  ],
+  "rewards": {
+    "experience": 50,
+    "function": "kitty:unfreeze_effects"
+  },
+  "sends_telemetry_event": true
+}

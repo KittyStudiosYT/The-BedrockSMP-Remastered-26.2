@@ -1,0 +1,42 @@
+    public static boolean enableLeftClickHold = false;
+    public static boolean enableRightClickHold = false;
+
+    // Set up Gson and the file path (config/kitty.json)
+    private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
+    private static final File CONFIG_FILE = new File(FabricLoader.getInstance().getConfigDir().toFile(), "kitty.json");
+
+    public static void load() {
+        if (CONFIG_FILE.exists()) {
+            try (FileReader reader = new FileReader(CONFIG_FILE)) {
+                ConfigData data = GSON.fromJson(reader, ConfigData.class);
+                if (data != null) {
+                    enableLeftClickHold = data.enableLeftClickHold;
+                    enableRightClickHold = data.enableRightClickHold;
+                }
+            } catch (IOException e) {
+                System.err.println("Failed to load The-BedrockSMP Remastered config!");
+                e.printStackTrace();
+            }
+        } else {
+            save(); // Create the default config file if it doesn't exist yet
+        }
+    }
+
+    public static void save() {
+        try (FileWriter writer = new FileWriter(CONFIG_FILE)) {
+            ConfigData data = new ConfigData();
+            data.enableLeftClickHold = enableLeftClickHold;
+            data.enableRightClickHold = enableRightClickHold;
+            GSON.toJson(data, writer);
+        } catch (IOException e) {
+            System.err.println("Failed to save The-BedrockSMP Remastered config!");
+            e.printStackTrace();
+        }
+    }
+
+    // A tiny helper class so Gson knows exactly what to read/write
+    private static class ConfigData {
+        boolean enableLeftClickHold;
+        boolean enableRightClickHold;
+    }
+}

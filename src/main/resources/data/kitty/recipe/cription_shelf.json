@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "shelf",
+  "key": {
+    "#": "kitty:stripped_cription_stem",
+    "X": "minecraft:item_frame"
+  },
+  "pattern": [
+    "###",
+    "XXX",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "kitty:cription_shelf"
+  }
+}

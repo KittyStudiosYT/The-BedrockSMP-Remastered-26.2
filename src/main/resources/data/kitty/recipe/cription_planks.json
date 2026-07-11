@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    "#kitty:cription_stems"
+  ],
+  "result": {
+    "count": 4,
+    "id": "kitty:cription_planks"
+  }
+}

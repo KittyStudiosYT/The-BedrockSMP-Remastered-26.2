@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "kitty:byzantium_nugget"
+    "kitty:byzantium_nugget",
+    "kitty:energy_nugget"
   ]
 }

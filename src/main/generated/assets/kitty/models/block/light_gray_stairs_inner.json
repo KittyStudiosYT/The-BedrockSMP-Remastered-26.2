@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "kitty:block/light_gray_planks",
-    "side": "kitty:block/light_gray_planks",
-    "top": "kitty:block/light_gray_planks"
-  }
-}

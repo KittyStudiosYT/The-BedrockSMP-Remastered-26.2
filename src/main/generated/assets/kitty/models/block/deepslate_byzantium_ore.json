@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "kitty:block/deepslate_byzantium_ore"
-  }
-}

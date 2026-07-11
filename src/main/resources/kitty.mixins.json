@@ -3,7 +3,8 @@
   "package": "net.itskittyyoutube.kitty.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
-    "ExampleMixin",
+    "OPENIFYOUDARE",
+    "EntityMixin",
     "PiglinAiMixin",
     "PiglinEquipmentMixin"
   ],
@@ -12,5 +13,12 @@
   },
   "overwrites": {
     "requireAnnotations": true
-	}
+  },
+  "client": [
+    "AbstractContainerScreenMixin",
+    "CreativeModeInventoryScreenMixin",
+    "ItemPickerMenuMixin",
+    "MinecraftMixin",
+    "SignBlockEntityRendererMixin"
+  ]
 }

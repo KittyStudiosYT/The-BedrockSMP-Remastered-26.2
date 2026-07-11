@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "shelf",
+  "key": {
+    "#": "minecraft:deepslate_emerald_ore",
+    "X": "minecraft:glow_item_frame",
+    "Z": "minecraft:item_frame",
+    "R": "kitty:red_planks",
+    "V": "kitty:blue_planks"
+  },
+  "pattern": [
+    "#R#",
+    "XZX",
+    "#V#"
+  ],
+  "result": {
+    "count": 6,
+    "id": "kitty:shelfshelf"
+  }
+}

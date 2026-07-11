@@ -77,7 +77,7 @@ public class TBSCreativeTabs {
                         bedrocksmp.accept(TBSItems.GILDED_NETHERITE_INGOT);
                         bedrocksmp.accept(TBSItems.GOLDEN_SCRAP);
                         bedrocksmp.accept(TBSItems.DUCT_TAPE);
-                        bedrocksmp.accept(TBSItems.ENERGY);
+                        bedrocksmp.accept(TBSItems.ENERGY_NUGGET);
                         bedrocksmp.accept(TBSItems.ENERGY_GEM);
                         bedrocksmp.accept(TBSItems.ENERGY_ROD);
                         bedrocksmp.accept(TBSItems.ENERGY_HANDLE);
@@ -191,6 +191,7 @@ public class TBSCreativeTabs {
                         bedrocksmp.accept(TBSItems.DIAMARITE_SCYTHE);
                         bedrocksmp.accept(TBSItems.CORRUPTIONITE_SCYTHE);
                         bedrocksmp.accept(TBSItems.DIAMARITE_MACE);
+                        bedrocksmp.accept(TBSItems.DOUBLED_MACE);
                         bedrocksmp.accept(TBSItems.STEEL_SPEAR);
                         bedrocksmp.accept(TBSItems.BYZANTIUM_SPEAR);
                         bedrocksmp.accept(TBSItems.ENERGY_SPEAR);
@@ -357,7 +358,7 @@ public class TBSCreativeTabs {
                         bedrocksmp.accept(TBSBlocks.CHERRY_BIRCH_TRAPDOOR);
                         bedrocksmp.accept(TBSBlocks.CHERRY_BIRCH_PRESSURE_PLATE);
                         bedrocksmp.accept(TBSBlocks.CHERRY_BIRCH_BUTTON);
-                        bedrocksmp.accept(TBSBlocks.CHERRY_BIRCH_LEAVES);
+                        //bedrocksmp.accept(TBSBlocks.CHERRY_BIRCH_LEAVES);
                         //output.add(TBSBlocks.CHERRY_BIRCH_SAPLING);
                         bedrocksmp.accept(TBSBlocks.GOLDEN_BIRCH_LOG);
                         bedrocksmp.accept(TBSBlocks.GOLDEN_BIRCH_WOOD);
@@ -372,7 +373,7 @@ public class TBSCreativeTabs {
                         bedrocksmp.accept(TBSBlocks.GOLDEN_BIRCH_TRAPDOOR);
                         bedrocksmp.accept(TBSBlocks.GOLDEN_BIRCH_PRESSURE_PLATE);
                         bedrocksmp.accept(TBSBlocks.GOLDEN_BIRCH_BUTTON);
-                        bedrocksmp.accept(TBSBlocks.GOLDEN_BIRCH_LEAVES);
+                        //bedrocksmp.accept(TBSBlocks.GOLDEN_BIRCH_LEAVES);
                         //output.add(TBSBlocks.GOLDEN_BIRCH_SAPLING);
                         bedrocksmp.accept(TBSBlocks.DIAMARITE_BLOCK);
                         bedrocksmp.accept(TBSBlocks.CORRUPTIONITE_BLOCK);
@@ -393,6 +394,39 @@ public class TBSCreativeTabs {
                         bedrocksmp.accept(TBSBlocks.DIAMARITE_CORE);
                         bedrocksmp.accept(TBSBlocks.GILDED_NETHERITE_BLOCK);
                         bedrocksmp.accept(TBSBlocks.GOLDEN_DEBRIS);
+                        bedrocksmp.accept(TBSBlocks.SHELFSHELF);
+                        bedrocksmp.accept(TBSBlocks.WHITE_SHELF);
+                        bedrocksmp.accept(TBSBlocks.LIGHT_GRAY_SHELF);
+                        bedrocksmp.accept(TBSBlocks.GRAY_SHELF);
+                        bedrocksmp.accept(TBSBlocks.BLACK_SHELF);
+                        bedrocksmp.accept(TBSBlocks.BROWN_SHELF);
+                        bedrocksmp.accept(TBSBlocks.RED_SHELF);
+                        bedrocksmp.accept(TBSBlocks.ORANGE_SHELF);
+                        bedrocksmp.accept(TBSBlocks.YELLOW_SHELF);
+                        bedrocksmp.accept(TBSBlocks.LIME_SHELF);
+                        bedrocksmp.accept(TBSBlocks.GREEN_SHELF);
+                        bedrocksmp.accept(TBSBlocks.CYAN_SHELF);
+                        bedrocksmp.accept(TBSBlocks.LIGHT_BLUE_SHELF);
+                        bedrocksmp.accept(TBSBlocks.BLUE_SHELF);
+                        bedrocksmp.accept(TBSBlocks.PURPLE_SHELF);
+                        bedrocksmp.accept(TBSBlocks.MAGENTA_SHELF);
+                        bedrocksmp.accept(TBSBlocks.PINK_SHELF);
+                        bedrocksmp.accept(TBSBlocks.CHERRY_BIRCH_SHELF);
+                        bedrocksmp.accept(TBSBlocks.GOLDEN_BIRCH_SHELF);
+                        bedrocksmp.accept(TBSBlocks.CRIPTION_STEM);
+                        bedrocksmp.accept(TBSBlocks.STRIPPED_CRIPTION_STEM);
+                        bedrocksmp.accept(TBSBlocks.CRIPTION_HYPHAE);
+                        bedrocksmp.accept(TBSBlocks.STRIPPED_CRIPTION_HYPHAE);
+                        bedrocksmp.accept(TBSBlocks.CRIPTION_PLANKS);
+                        bedrocksmp.accept(TBSBlocks.CRIPTION_STAIRS);
+                        bedrocksmp.accept(TBSBlocks.CRIPTION_SLAB);
+                        bedrocksmp.accept(TBSBlocks.CRIPTION_FENCE);
+                        bedrocksmp.accept(TBSBlocks.CRIPTION_FENCE_GATE);
+                        bedrocksmp.accept(TBSBlocks.CRIPTION_DOOR);
+                        bedrocksmp.accept(TBSBlocks.CRIPTION_TRAPDOOR);
+                        bedrocksmp.accept(TBSBlocks.CRIPTION_PRESSURE_PLATE);
+                        bedrocksmp.accept(TBSBlocks.CRIPTION_BUTTON);
+                        bedrocksmp.accept(TBSBlocks.CRIPTION_SHELF);
 
                     }).build());
 
@@ -471,6 +505,7 @@ public class TBSCreativeTabs {
                         wood.accept(Items.OAK_TRAPDOOR);
                         wood.accept(Items.OAK_PRESSURE_PLATE);
                         wood.accept(Items.OAK_BUTTON);
+                        wood.accept(Items.OAK_SHELF);
                         wood.accept(Items.SPRUCE_LOG);
                         wood.accept(Items.SPRUCE_WOOD);
                         wood.accept(Items.STRIPPED_SPRUCE_LOG);
@@ -484,6 +519,7 @@ public class TBSCreativeTabs {
                         wood.accept(Items.SPRUCE_TRAPDOOR);
                         wood.accept(Items.SPRUCE_PRESSURE_PLATE);
                         wood.accept(Items.SPRUCE_BUTTON);
+                        wood.accept(Items.SPRUCE_SHELF);
                         wood.accept(Items.BIRCH_LOG);
                         wood.accept(Items.BIRCH_WOOD);
                         wood.accept(Items.STRIPPED_BIRCH_LOG);
@@ -497,6 +533,7 @@ public class TBSCreativeTabs {
                         wood.accept(Items.BIRCH_TRAPDOOR);
                         wood.accept(Items.BIRCH_PRESSURE_PLATE);
                         wood.accept(Items.BIRCH_BUTTON);
+                        wood.accept(Items.BIRCH_SHELF);
                         wood.accept(TBSBlocks.CHERRY_BIRCH_LOG);
                         wood.accept(TBSBlocks.CHERRY_BIRCH_WOOD);
                         wood.accept(TBSBlocks.STRIPPED_CHERRY_BIRCH_LOG);
@@ -510,6 +547,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.CHERRY_BIRCH_TRAPDOOR);
                         wood.accept(TBSBlocks.CHERRY_BIRCH_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.CHERRY_BIRCH_BUTTON);
+                        wood.accept(TBSBlocks.CHERRY_BIRCH_SHELF);
                         wood.accept(TBSBlocks.GOLDEN_BIRCH_LOG);
                         wood.accept(TBSBlocks.GOLDEN_BIRCH_WOOD);
                         wood.accept(TBSBlocks.STRIPPED_GOLDEN_BIRCH_LOG);
@@ -523,6 +561,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.GOLDEN_BIRCH_TRAPDOOR);
                         wood.accept(TBSBlocks.GOLDEN_BIRCH_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.GOLDEN_BIRCH_BUTTON);
+                        wood.accept(TBSBlocks.GOLDEN_BIRCH_SHELF);
                         wood.accept(Items.JUNGLE_LOG);
                         wood.accept(Items.JUNGLE_WOOD);
                         wood.accept(Items.STRIPPED_JUNGLE_LOG);
@@ -536,6 +575,7 @@ public class TBSCreativeTabs {
                         wood.accept(Items.JUNGLE_TRAPDOOR);
                         wood.accept(Items.JUNGLE_PRESSURE_PLATE);
                         wood.accept(Items.JUNGLE_BUTTON);
+                        wood.accept(Items.JUNGLE_SHELF);
                         wood.accept(Items.ACACIA_LOG);
                         wood.accept(Items.ACACIA_WOOD);
                         wood.accept(Items.STRIPPED_ACACIA_LOG);
@@ -549,6 +589,7 @@ public class TBSCreativeTabs {
                         wood.accept(Items.ACACIA_TRAPDOOR);
                         wood.accept(Items.ACACIA_PRESSURE_PLATE);
                         wood.accept(Items.ACACIA_BUTTON);
+                        wood.accept(Items.ACACIA_SHELF);
                         wood.accept(Items.DARK_OAK_LOG);
                         wood.accept(Items.DARK_OAK_WOOD);
                         wood.accept(Items.STRIPPED_DARK_OAK_LOG);
@@ -559,11 +600,12 @@ public class TBSCreativeTabs {
                         wood.accept(Items.DARK_OAK_FENCE);
                         wood.accept(Items.DARK_OAK_FENCE_GATE);
                         wood.accept(Items.DARK_OAK_DOOR);
-                        wood.accept(TBSBlocks.DARK_OAK_DOOR_WITH_WINDOWS);
                         wood.accept(Items.DARK_OAK_TRAPDOOR);
+                        wood.accept(TBSBlocks.DARK_OAK_DOOR_WITH_WINDOWS);
                         wood.accept(TBSBlocks.DARK_OAK_TRAPDOOR_WITH_WINDOWS);
                         wood.accept(Items.DARK_OAK_PRESSURE_PLATE);
                         wood.accept(Items.DARK_OAK_BUTTON);
+                        wood.accept(Items.DARK_OAK_SHELF);
                         wood.accept(Items.MANGROVE_LOG);
                         wood.accept(Items.MANGROVE_WOOD);
                         wood.accept(Items.STRIPPED_MANGROVE_LOG);
@@ -577,6 +619,7 @@ public class TBSCreativeTabs {
                         wood.accept(Items.MANGROVE_TRAPDOOR);
                         wood.accept(Items.MANGROVE_PRESSURE_PLATE);
                         wood.accept(Items.MANGROVE_BUTTON);
+                        wood.accept(Items.MANGROVE_SHELF);
                         wood.accept(Items.CHERRY_LOG);
                         wood.accept(Items.CHERRY_WOOD);
                         wood.accept(Items.STRIPPED_CHERRY_LOG);
@@ -590,6 +633,7 @@ public class TBSCreativeTabs {
                         wood.accept(Items.CHERRY_TRAPDOOR);
                         wood.accept(Items.CHERRY_PRESSURE_PLATE);
                         wood.accept(Items.CHERRY_BUTTON);
+                        wood.accept(Items.CHERRY_SHELF);
                         wood.accept(Items.PALE_OAK_LOG);
                         wood.accept(Items.PALE_OAK_WOOD);
                         wood.accept(Items.STRIPPED_PALE_OAK_LOG);
@@ -603,6 +647,7 @@ public class TBSCreativeTabs {
                         wood.accept(Items.PALE_OAK_TRAPDOOR);
                         wood.accept(Items.PALE_OAK_PRESSURE_PLATE);
                         wood.accept(Items.PALE_OAK_BUTTON);
+                        wood.accept(Items.PALE_OAK_SHELF);
                         wood.accept(Items.BAMBOO_BLOCK);
                         wood.accept(Items.STRIPPED_BAMBOO_BLOCK);
                         wood.accept(Items.BAMBOO_PLANKS);
@@ -617,6 +662,7 @@ public class TBSCreativeTabs {
                         wood.accept(Items.BAMBOO_TRAPDOOR);
                         wood.accept(Items.BAMBOO_PRESSURE_PLATE);
                         wood.accept(Items.BAMBOO_BUTTON);
+                        wood.accept(Items.BAMBOO_SHELF);
                         wood.accept(Items.CRIMSON_STEM);
                         wood.accept(Items.CRIMSON_HYPHAE);
                         wood.accept(Items.STRIPPED_CRIMSON_STEM);
@@ -630,6 +676,7 @@ public class TBSCreativeTabs {
                         wood.accept(Items.CRIMSON_TRAPDOOR);
                         wood.accept(Items.CRIMSON_PRESSURE_PLATE);
                         wood.accept(Items.CRIMSON_BUTTON);
+                        wood.accept(Items.CRIMSON_SHELF);
                         wood.accept(Items.WARPED_STEM);
                         wood.accept(Items.WARPED_HYPHAE);
                         wood.accept(Items.STRIPPED_WARPED_STEM);
@@ -643,6 +690,21 @@ public class TBSCreativeTabs {
                         wood.accept(Items.WARPED_TRAPDOOR);
                         wood.accept(Items.WARPED_PRESSURE_PLATE);
                         wood.accept(Items.WARPED_BUTTON);
+                        wood.accept(Items.WARPED_SHELF);
+                        wood.accept(TBSBlocks.CRIPTION_STEM);
+                        wood.accept(TBSBlocks.STRIPPED_CRIPTION_STEM);
+                        wood.accept(TBSBlocks.CRIPTION_HYPHAE);
+                        wood.accept(TBSBlocks.STRIPPED_CRIPTION_HYPHAE);
+                        wood.accept(TBSBlocks.CRIPTION_PLANKS);
+                        wood.accept(TBSBlocks.CRIPTION_STAIRS);
+                        wood.accept(TBSBlocks.CRIPTION_SLAB);
+                        wood.accept(TBSBlocks.CRIPTION_FENCE);
+                        wood.accept(TBSBlocks.CRIPTION_FENCE_GATE);
+                        wood.accept(TBSBlocks.CRIPTION_DOOR);
+                        wood.accept(TBSBlocks.CRIPTION_TRAPDOOR);
+                        wood.accept(TBSBlocks.CRIPTION_PRESSURE_PLATE);
+                        wood.accept(TBSBlocks.CRIPTION_BUTTON);
+                        wood.accept(TBSBlocks.CRIPTION_SHELF);
                         wood.accept(TBSBlocks.PLANKS_TEMPLATE);
                         wood.accept(TBSBlocks.WHITE_PLANKS);
                         wood.accept(TBSBlocks.WHITE_STAIRS);
@@ -653,6 +715,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.WHITE_TRAPDOOR);
                         wood.accept(TBSBlocks.WHITE_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.WHITE_BUTTON);
+                        wood.accept(TBSBlocks.WHITE_SHELF);
                         wood.accept(TBSBlocks.LIGHT_GRAY_PLANKS);
                         wood.accept(TBSBlocks.LIGHT_GRAY_STAIRS);
                         wood.accept(TBSBlocks.LIGHT_GRAY_SLAB);
@@ -662,6 +725,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.LIGHT_GRAY_TRAPDOOR);
                         wood.accept(TBSBlocks.LIGHT_GRAY_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.LIGHT_GRAY_BUTTON);
+                        wood.accept(TBSBlocks.LIGHT_GRAY_SHELF);
                         wood.accept(TBSBlocks.GRAY_PLANKS);
                         wood.accept(TBSBlocks.GRAY_STAIRS);
                         wood.accept(TBSBlocks.GRAY_SLAB);
@@ -671,6 +735,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.GRAY_TRAPDOOR);
                         wood.accept(TBSBlocks.GRAY_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.GRAY_BUTTON);
+                        wood.accept(TBSBlocks.GRAY_SHELF);
                         wood.accept(TBSBlocks.BLACK_PLANKS);
                         wood.accept(TBSBlocks.BLACK_STAIRS);
                         wood.accept(TBSBlocks.BLACK_SLAB);
@@ -680,6 +745,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.BLACK_TRAPDOOR);
                         wood.accept(TBSBlocks.BLACK_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.BLACK_BUTTON);
+                        wood.accept(TBSBlocks.BLACK_SHELF);
                         wood.accept(TBSBlocks.BROWN_PLANKS);
                         wood.accept(TBSBlocks.BROWN_STAIRS);
                         wood.accept(TBSBlocks.BROWN_SLAB);
@@ -689,6 +755,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.BROWN_TRAPDOOR);
                         wood.accept(TBSBlocks.BROWN_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.BROWN_BUTTON);
+                        wood.accept(TBSBlocks.BROWN_SHELF);
                         wood.accept(TBSBlocks.RED_PLANKS);
                         wood.accept(TBSBlocks.RED_STAIRS);
                         wood.accept(TBSBlocks.RED_SLAB);
@@ -698,6 +765,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.RED_TRAPDOOR);
                         wood.accept(TBSBlocks.RED_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.RED_BUTTON);
+                        wood.accept(TBSBlocks.RED_SHELF);
                         wood.accept(TBSBlocks.ORANGE_PLANKS);
                         wood.accept(TBSBlocks.ORANGE_STAIRS);
                         wood.accept(TBSBlocks.ORANGE_SLAB);
@@ -707,6 +775,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.ORANGE_TRAPDOOR);
                         wood.accept(TBSBlocks.ORANGE_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.ORANGE_BUTTON);
+                        wood.accept(TBSBlocks.ORANGE_SHELF);
                         wood.accept(TBSBlocks.YELLOW_PLANKS);
                         wood.accept(TBSBlocks.YELLOW_STAIRS);
                         wood.accept(TBSBlocks.YELLOW_SLAB);
@@ -716,6 +785,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.YELLOW_TRAPDOOR);
                         wood.accept(TBSBlocks.YELLOW_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.YELLOW_BUTTON);
+                        wood.accept(TBSBlocks.YELLOW_SHELF);
                         wood.accept(TBSBlocks.LIME_PLANKS);
                         wood.accept(TBSBlocks.LIME_STAIRS);
                         wood.accept(TBSBlocks.LIME_SLAB);
@@ -725,6 +795,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.LIME_TRAPDOOR);
                         wood.accept(TBSBlocks.LIME_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.LIME_BUTTON);
+                        wood.accept(TBSBlocks.LIME_SHELF);
                         wood.accept(TBSBlocks.GREEN_PLANKS);
                         wood.accept(TBSBlocks.GREEN_STAIRS);
                         wood.accept(TBSBlocks.GREEN_SLAB);
@@ -734,6 +805,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.GREEN_TRAPDOOR);
                         wood.accept(TBSBlocks.GREEN_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.GREEN_BUTTON);
+                        wood.accept(TBSBlocks.GREEN_SHELF);
                         wood.accept(TBSBlocks.CYAN_PLANKS);
                         wood.accept(TBSBlocks.CYAN_STAIRS);
                         wood.accept(TBSBlocks.CYAN_SLAB);
@@ -743,6 +815,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.CYAN_TRAPDOOR);
                         wood.accept(TBSBlocks.CYAN_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.CYAN_BUTTON);
+                        wood.accept(TBSBlocks.CYAN_SHELF);
                         wood.accept(TBSBlocks.LIGHT_BLUE_PLANKS);
                         wood.accept(TBSBlocks.LIGHT_BLUE_STAIRS);
                         wood.accept(TBSBlocks.LIGHT_BLUE_SLAB);
@@ -752,6 +825,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.LIGHT_BLUE_TRAPDOOR);
                         wood.accept(TBSBlocks.LIGHT_BLUE_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.LIGHT_BLUE_BUTTON);
+                        wood.accept(TBSBlocks.LIGHT_BLUE_SHELF);
                         wood.accept(TBSBlocks.BLUE_PLANKS);
                         wood.accept(TBSBlocks.BLUE_STAIRS);
                         wood.accept(TBSBlocks.BLUE_SLAB);
@@ -761,6 +835,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.BLUE_TRAPDOOR);
                         wood.accept(TBSBlocks.BLUE_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.BLUE_BUTTON);
+                        wood.accept(TBSBlocks.BLUE_SHELF);
                         wood.accept(TBSBlocks.PURPLE_PLANKS);
                         wood.accept(TBSBlocks.PURPLE_STAIRS);
                         wood.accept(TBSBlocks.PURPLE_SLAB);
@@ -770,6 +845,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.PURPLE_TRAPDOOR);
                         wood.accept(TBSBlocks.PURPLE_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.PURPLE_BUTTON);
+                        wood.accept(TBSBlocks.PURPLE_SHELF);
                         wood.accept(TBSBlocks.MAGENTA_PLANKS);
                         wood.accept(TBSBlocks.MAGENTA_STAIRS);
                         wood.accept(TBSBlocks.MAGENTA_SLAB);
@@ -779,6 +855,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.MAGENTA_TRAPDOOR);
                         wood.accept(TBSBlocks.MAGENTA_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.MAGENTA_BUTTON);
+                        wood.accept(TBSBlocks.MAGENTA_SHELF);
                         wood.accept(TBSBlocks.PINK_PLANKS);
                         wood.accept(TBSBlocks.PINK_STAIRS);
                         wood.accept(TBSBlocks.PINK_SLAB);
@@ -788,6 +865,7 @@ public class TBSCreativeTabs {
                         wood.accept(TBSBlocks.PINK_TRAPDOOR);
                         wood.accept(TBSBlocks.PINK_PRESSURE_PLATE);
                         wood.accept(TBSBlocks.PINK_BUTTON);
+                        wood.accept(TBSBlocks.PINK_SHELF);
 
                     }).build());
 
@@ -828,11 +906,11 @@ public class TBSCreativeTabs {
                         doors.accept(TBSBlocks.MAGENTA_DOOR);
                         doors.accept(TBSBlocks.PINK_DOOR);
                         doors.accept(Items.IRON_DOOR);
-                        copperDoorFamily(family -> family.weathering().forEach(doors::accept));
-                        copperDoorFamily(family -> family.waxed().forEach(doors::accept));
                         doors.accept(TBSBlocks.STONE_DOOR);
                         doors.accept(TBSBlocks.BEDROCK_DOOR);
                         doors.accept(TBSBlocks.OBSIDIAN_DOOR);
+                        copperDoorFamily(family -> family.weathering().forEach(doors::accept));
+                        copperDoorFamily(family -> family.waxed().forEach(doors::accept));
 
                     }).build());
 
@@ -873,11 +951,11 @@ public class TBSCreativeTabs {
                         trapDoors.accept(TBSBlocks.MAGENTA_TRAPDOOR);
                         trapDoors.accept(TBSBlocks.PINK_TRAPDOOR);
                         trapDoors.accept(Items.IRON_TRAPDOOR);
-                        coppertrapDoorFamily(family -> family.weathering().forEach(trapDoors::accept));
-                        coppertrapDoorFamily(family -> family.waxed().forEach(trapDoors::accept));
                         trapDoors.accept(TBSBlocks.STONE_TRAPDOOR);
                         trapDoors.accept(TBSBlocks.BEDROCK_TRAPDOOR);
                         trapDoors.accept(TBSBlocks.OBSIDIAN_TRAPDOOR);
+                        coppertrapDoorFamily(family -> family.weathering().forEach(trapDoors::accept));
+                        coppertrapDoorFamily(family -> family.waxed().forEach(trapDoors::accept));
 
                     }).build());
 

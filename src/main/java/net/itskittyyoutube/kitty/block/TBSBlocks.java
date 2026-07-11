@@ -3,7 +3,6 @@ package net.itskittyyoutube.kitty.block;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.itskittyyoutube.kitty.TBS;
 import net.minecraft.core.Registry;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
@@ -81,6 +80,10 @@ public class TBSBlocks {
             properties -> new Block(properties.instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
 
+    public static final Block CRIPTION_PLANKS = registerBlock("cription_planks",
+            properties -> new Block(properties.instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0F).sound(SoundType.NETHER_WOOD)));
+
     //Doors
     public static final Block WHITE_DOOR = registerBlock("white_door",
             properties -> new DoorBlock(BlockSetType.PALE_OAK, properties.instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F)
@@ -151,6 +154,10 @@ public class TBSBlocks {
             properties -> new DoorBlock(BlockSetType.CHERRY, properties.instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F)
                     .noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY).sound(SoundType.WOOD)));
 
+    public static final Block CRIPTION_DOOR = registerBlock("cription_door",
+            properties -> new DoorBlock(BlockSetType.WARPED, properties.instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F)
+                    .noOcclusion().pushReaction(PushReaction.DESTROY).sound(SoundType.NETHER_WOOD)));
+
 
     //Trapdoors
     public static final Block WHITE_TRAPDOOR = registerBlock("white_trapdoor",
@@ -220,6 +227,10 @@ public class TBSBlocks {
             properties -> new TrapDoorBlock(BlockSetType.CHERRY, properties.instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F)
                     .noOcclusion().isValidSpawn(Blocks::never).ignitedByLava().sound(SoundType.WOOD)));
 
+    public static final Block CRIPTION_TRAPDOOR = registerBlock("cription_trapdoor",
+            properties -> new TrapDoorBlock(BlockSetType.WARPED, properties.instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F)
+                    .noOcclusion().isValidSpawn(Blocks::never).sound(SoundType.NETHER_WOOD)));
+
     //Buttons
     public static final Block WHITE_BUTTON = registerBlock("white_button",
             properties -> new ButtonBlock(BlockSetType.PALE_OAK, 30, properties.strength(0.6F)
@@ -275,6 +286,10 @@ public class TBSBlocks {
     public static final Block GOLDEN_BIRCH_BUTTON = registerBlock("golden_birch_button",
             properties -> new ButtonBlock(BlockSetType.CHERRY, 30, properties.strength(0.6F)
                     .noCollision().sound(SoundType.WOOD)));
+
+    public static final Block CRIPTION_BUTTON = registerBlock("cription_button",
+            properties -> new ButtonBlock(BlockSetType.WARPED, 30, properties.strength(0.6F)
+                    .noCollision().sound(SoundType.NETHER_WOOD)));
 
     //Pressure Plates
     public static final Block WHITE_PRESSURE_PLATE = registerBlock("white_pressure_plate",
@@ -332,6 +347,10 @@ public class TBSBlocks {
             properties -> new PressurePlateBlock(BlockSetType.CHERRY, properties.strength(0.5F)
                     .sound(SoundType.WOOD)));
 
+    public static final Block CRIPTION_PRESSURE_PLATE = registerBlock("cription_pressure_plate",
+            properties -> new PressurePlateBlock(BlockSetType.WARPED, properties.strength(0.5F)
+                    .sound(SoundType.NETHER_WOOD)));
+
     //Stairs
     public static final Block WHITE_STAIRS = registerBlock("white_stairs",
             properties -> new StairBlock(TBSBlocks.WHITE_PLANKS.defaultBlockState(),
@@ -388,6 +407,10 @@ public class TBSBlocks {
             properties -> new StairBlock(TBSBlocks.CHERRY_BIRCH_PLANKS.defaultBlockState(),
                     properties.strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 
+    public static final Block CRIPTION_STAIRS = registerBlock("cription_stairs",
+            properties -> new StairBlock(TBSBlocks.CRIPTION_PLANKS.defaultBlockState(),
+                    properties.strength(2.0F, 3.0F).sound(SoundType.NETHER_WOOD)));
+
     //Slabs
     public static final Block WHITE_SLAB = registerBlock("white_slab",
             properties -> new SlabBlock(properties.strength(2.0F, 3.0F).sound(SoundType.WOOD)));
@@ -425,6 +448,9 @@ public class TBSBlocks {
             properties -> new SlabBlock(properties.strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static final Block GOLDEN_BIRCH_SLAB = registerBlock("golden_birch_slab",
             properties -> new SlabBlock(properties.strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+
+    public static final Block CRIPTION_SLAB = registerBlock("cription_slab",
+            properties -> new SlabBlock(properties.strength(2.0F, 3.0F).sound(SoundType.NETHER_WOOD)));
 
     //Fences
     public static final Block WHITE_FENCE = registerBlock("white_fence",
@@ -464,6 +490,9 @@ public class TBSBlocks {
     public static final Block GOLDEN_BIRCH_FENCE = registerBlock("golden_birch_fence",
             properties -> new FenceBlock(properties.strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 
+    public static final Block CRIPTION_FENCE = registerBlock("cription_fence",
+            properties -> new FenceBlock(properties.strength(2.0F, 3.0F).sound(SoundType.NETHER_WOOD)));
+
     //Fence Gates
     public static final Block WHITE_FENCE_GATE = registerBlock("white_fence_gate",
             properties -> new FenceGateBlock(WoodType.PALE_OAK, properties.strength(2.0F, 3.0F).sound(SoundType.WOOD)));
@@ -502,77 +531,91 @@ public class TBSBlocks {
     public static final Block GOLDEN_BIRCH_FENCE_GATE = registerBlock("golden_birch_fence_gate",
             properties -> new FenceGateBlock(WoodType.CHERRY, properties.strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 
+    public static final Block CRIPTION_FENCE_GATE = registerBlock("cription_fence_gate",
+            properties -> new FenceGateBlock(WoodType.WARPED, properties.strength(2.0F, 3.0F).sound(SoundType.NETHER_WOOD)));
+
     //Leaves
-    public static final Block CHERRY_BIRCH_LEAVES = registerBlock("cherry_birch_leaves",
-            properties -> new UntintedParticleLeavesBlock(0.1F, ParticleTypes.CHERRY_LEAVES, properties
-                    .mapColor(MapColor.COLOR_PINK)
-                    .strength(0.2F)
-                    .randomTicks()
-                    .sound(SoundType.CHERRY_LEAVES)
-                    .noOcclusion()
-                    .isValidSpawn(Blocks::ocelotOrParrot)
-                    .isSuffocating(Blocks::never)
-                    .isViewBlocking(Blocks::never)
-                    .ignitedByLava()
-                    .pushReaction(PushReaction.DESTROY)
-                    .isRedstoneConductor(Blocks::never)));
-    public static final Block GOLDEN_BIRCH_LEAVES = registerBlock("golden_birch_leaves",
-            properties -> new UntintedParticleLeavesBlock(0.1F, ParticleTypes.CHERRY_LEAVES, properties
-                    .mapColor(MapColor.GOLD)
-                    .strength(0.2F)
-                    .randomTicks()
-                    .sound(SoundType.CHERRY_LEAVES)
-                    .noOcclusion()
-                    .isValidSpawn(Blocks::ocelotOrParrot)
-                    .isSuffocating(Blocks::never)
-                    .isViewBlocking(Blocks::never)
-                    .ignitedByLava()
-                    .pushReaction(PushReaction.DESTROY)
-                    .isRedstoneConductor(Blocks::never)));
+    //public static final Block CHERRY_BIRCH_LEAVES = registerBlock("cherry_birch_leaves",
+            //properties -> new UntintedParticleLeavesBlock(0.1F, ParticleTypes.CHERRY_LEAVES, properties
+                    //.mapColor(MapColor.COLOR_PINK)
+                    //.strength(0.2F)
+                    //.randomTicks()
+                    //.sound(SoundType.CHERRY_LEAVES)
+                    //.noOcclusion()
+                    //.isValidSpawn(Blocks::ocelotOrParrot)
+                    //.isSuffocating(Blocks::never)
+                    //.isViewBlocking(Blocks::never)
+                    //.ignitedByLava()
+                    //.pushReaction(PushReaction.DESTROY)
+                    //.isRedstoneConductor(Blocks::never)));
+    //public static final Block GOLDEN_BIRCH_LEAVES = registerBlock("golden_birch_leaves",
+            //properties -> new UntintedParticleLeavesBlock(0.1F, ParticleTypes.CHERRY_LEAVES, properties
+                    //.mapColor(MapColor.GOLD)
+                    //.strength(0.2F)
+                    //.randomTicks()
+                    //.sound(SoundType.CHERRY_LEAVES)
+                    //.noOcclusion()
+                    //.isValidSpawn(Blocks::ocelotOrParrot)
+                    //.isSuffocating(Blocks::never)
+                    //.isViewBlocking(Blocks::never)
+                    //.ignitedByLava()
+                    //.pushReaction(PushReaction.DESTROY)
+                    //.isRedstoneConductor(Blocks::never)));
 
     //Logs
     public static final Block CHERRY_BIRCH_LOG = registerBlock("cherry_birch_log",
-            properties -> new RotatedPillarBlock(properties
+            logProperties -> new RotatedPillarBlock(logProperties
                     .mapColor(MapColor.TERRACOTTA_WHITE)
                     .mapColor(MapColor.TERRACOTTA_GRAY)
                     .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));
+                    .strength(2.0F).sound(SoundType.CHERRY_WOOD).ignitedByLava()));
     public static final Block STRIPPED_CHERRY_BIRCH_LOG = registerBlock("stripped_cherry_birch_log",
-            properties -> new RotatedPillarBlock(properties
+            logProperties -> new RotatedPillarBlock(logProperties
                     .mapColor(MapColor.TERRACOTTA_WHITE)
                     .mapColor(MapColor.TERRACOTTA_GRAY)
                     .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));
+                    .strength(2.0F).sound(SoundType.CHERRY_WOOD).ignitedByLava()));
     public static final Block GOLDEN_BIRCH_LOG = registerBlock("golden_birch_log",
-            properties -> new RotatedPillarBlock(properties
+            logProperties -> new RotatedPillarBlock(logProperties
                     .mapColor(MapColor.TERRACOTTA_WHITE)
                     .mapColor(MapColor.TERRACOTTA_YELLOW)
                     .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));
+                    .strength(2.0F).sound(SoundType.CHERRY_WOOD).ignitedByLava()));
     public static final Block STRIPPED_GOLDEN_BIRCH_LOG = registerBlock("stripped_golden_birch_log",
-            properties -> new RotatedPillarBlock(properties
+            logProperties -> new RotatedPillarBlock(logProperties
                     .mapColor(MapColor.TERRACOTTA_WHITE)
                     .mapColor(MapColor.TERRACOTTA_YELLOW)
                     .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));
+                    .strength(2.0F).sound(SoundType.CHERRY_WOOD).ignitedByLava()));
+
+    public static final Block CRIPTION_STEM = registerBlock("cription_stem",
+            netherStemProperties -> new RotatedPillarBlock(netherStemProperties
+                    .mapColor(MapColor.WARPED_STEM)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F).sound(SoundType.STEM)));
+    public static final Block STRIPPED_CRIPTION_STEM = registerBlock("stripped_cription_stem",
+            netherStemProperties -> new RotatedPillarBlock(netherStemProperties
+                    .mapColor(MapColor.WARPED_STEM)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F).sound(SoundType.STEM)));
 
     //Woods
     public static final Block CHERRY_BIRCH_WOOD = registerBlock("cherry_birch_wood",
-            properties -> new RotatedPillarBlock(properties
+            logProperties -> new RotatedPillarBlock(logProperties
                     .mapColor(MapColor.TERRACOTTA_GRAY)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F)
                     .sound(SoundType.CHERRY_WOOD)
                     .ignitedByLava()));
     public static final Block STRIPPED_CHERRY_BIRCH_WOOD = registerBlock("stripped_cherry_birch_wood",
-            properties -> new RotatedPillarBlock(properties
+            logProperties -> new RotatedPillarBlock(logProperties
                     .mapColor(MapColor.TERRACOTTA_GRAY)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F)
                     .sound(SoundType.CHERRY_WOOD)
                     .ignitedByLava()));
     public static final Block GOLDEN_BIRCH_WOOD = registerBlock("golden_birch_wood",
-            properties -> new RotatedPillarBlock(properties
+            logProperties -> new RotatedPillarBlock(logProperties
                     .mapColor(MapColor.TERRACOTTA_YELLOW)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F)
@@ -585,6 +628,19 @@ public class TBSBlocks {
                     .strength(2.0F)
                     .sound(SoundType.CHERRY_WOOD)
                     .ignitedByLava()));
+
+    public static final Block CRIPTION_HYPHAE = registerBlock("cription_hyphae",
+            netherStemProperties -> new RotatedPillarBlock(netherStemProperties
+                    .mapColor(MapColor.WARPED_HYPHAE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sound(SoundType.STEM)));
+    public static final Block STRIPPED_CRIPTION_HYPHAE = registerBlock("stripped_cription_hyphae",
+            netherStemProperties -> new RotatedPillarBlock(netherStemProperties
+                    .mapColor(MapColor.WARPED_HYPHAE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sound(SoundType.STEM)));
 
     //Saplings
     //public static final Block CHERRY_BIRCH_SAPLING = registerBlock("cherry_birch_sapling",
@@ -613,6 +669,50 @@ public class TBSBlocks {
                     //.ignitedByLava()
                     //.strength(2.0F, 3.0F));
 
+    public static final Block SHELFSHELF = registerShelfBlock("shelfshelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.BLUE_PLANKS).sound(SoundType.NETHER_WOOD).lightLevel(state -> 2).noOcclusion().setId(key)));
+
+    public static final Block WHITE_SHELF = registerShelfBlock("white_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.WHITE_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+    public static final Block LIGHT_GRAY_SHELF = registerShelfBlock("light_gray_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.LIGHT_GRAY_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+    public static final Block GRAY_SHELF = registerShelfBlock("gray_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.GRAY_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+    public static final Block BLACK_SHELF = registerShelfBlock("black_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.BLACK_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+    public static final Block BROWN_SHELF = registerShelfBlock("brown_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.BROWN_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+    public static final Block RED_SHELF = registerShelfBlock("red_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.RED_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+    public static final Block ORANGE_SHELF = registerShelfBlock("orange_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.ORANGE_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+    public static final Block YELLOW_SHELF = registerShelfBlock("yellow_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.YELLOW_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+    public static final Block LIME_SHELF = registerShelfBlock("lime_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.LIME_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+    public static final Block GREEN_SHELF = registerShelfBlock("green_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.GREEN_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+    public static final Block CYAN_SHELF = registerShelfBlock("cyan_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.CYAN_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+    public static final Block LIGHT_BLUE_SHELF = registerShelfBlock("light_blue_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.LIGHT_BLUE_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+    public static final Block BLUE_SHELF = registerShelfBlock("blue_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.BLUE_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+    public static final Block PURPLE_SHELF = registerShelfBlock("purple_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.PURPLE_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+    public static final Block MAGENTA_SHELF = registerShelfBlock("magenta_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.MAGENTA_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+    public static final Block PINK_SHELF = registerShelfBlock("pink_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.PINK_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+
+    public static final Block CHERRY_BIRCH_SHELF = registerShelfBlock("cherry_birch_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.CHERRY_BIRCH_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+    public static final Block GOLDEN_BIRCH_SHELF = registerShelfBlock("golden_birch_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.GOLDEN_BIRCH_PLANKS).sound(SoundType.WOOD).lightLevel(state -> 2).noOcclusion().setId(key).ignitedByLava()));
+
+    public static final Block CRIPTION_SHELF = registerShelfBlock("cription_shelf",
+            key -> new ShelfBlock(BlockBehaviour.Properties.ofFullCopy(TBSBlocks.CRIPTION_PLANKS).sound(SoundType.NETHER_WOOD).lightLevel(state -> 2).noOcclusion().setId(key)));
+
     //Blocks
     public static final Block DIAMARITE_BLOCK = registerBlock("diamarite_block",
             properties -> new Block(properties.mapColor(MapColor.COLOR_BLACK).requiresCorrectToolForDrops()
@@ -633,9 +733,9 @@ public class TBSBlocks {
             properties -> new Block(properties.mapColor(MapColor.DEEPSLATE).requiresCorrectToolForDrops()
                     .strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE)));
 
-    public static final Block DIAMARITE_CORE = registerBlock("diamarite_core",
-            properties -> new HeavyCoreBlock(properties.mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.SNARE)
-                    .sound(SoundType.HEAVY_CORE).strength(10.0F).pushReaction(PushReaction.NORMAL).strength(1200.0F)));
+    public static final Block DIAMARITE_CORE = registerCoreBlock("diamarite_core",
+            HeavyCoreBlock::new, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.SNARE)
+                    .sound(SoundType.HEAVY_CORE).strength(10.0F).pushReaction(PushReaction.NORMAL).strength(1200.0F));
 
     public static final Block GILDED_NETHERITE_BLOCK = registerBlock("gilded_netherite_block",
             properties -> new Block(properties.mapColor(MapColor.COLOR_BLACK).requiresCorrectToolForDrops()
@@ -662,6 +762,24 @@ public class TBSBlocks {
                         .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(TBS.MOD_ID, name)))));
     }
 
+    private static Block registerShelfBlock(String name, java.util.function.Function<ResourceKey<Block>, Block> factory) {
+        Identifier id = Identifier.fromNamespaceAndPath(TBS.MOD_ID, name);
+        ResourceKey<Block> key = ResourceKey.create(BuiltInRegistries.BLOCK.key(), id);
+        // Construct with registry key to satisfy settings that need an id during construction
+        Block block = factory.apply(key);
+        // Register the block
+        Registry.register(BuiltInRegistries.BLOCK, id, block);
+        // Register the block item so it appears in inventory and can be placed
+        ResourceKey<Item> itemKey = ResourceKey.create(BuiltInRegistries.ITEM.key(), id);
+        Item.Properties itemSettings = new Item.Properties().setId(itemKey);
+
+        // Standard block item registration for shelves
+        BlockItem item = new BlockItem(block, itemSettings);
+        Registry.register(BuiltInRegistries.ITEM, id, item);
+        // NOTE: Creative tab population moved to registerModBlocks() for manual ordering
+        return block;
+    }
+
     //private static Block register(String id,
                                   //Function<AbstractBlock.Settings, Block> factory,
                                   //AbstractBlock.Settings settings) {
@@ -677,189 +795,268 @@ public class TBSBlocks {
         //);
     //}
 
+    private static Block registerCoreBlock(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings) {
+        // 1. Create the unique identifier
+        Identifier id = Identifier.fromNamespaceAndPath(TBS.MOD_ID, name);
+
+        // 2. Create the registry keys
+        ResourceKey<Block> blockKey = ResourceKey.create(Registries.BLOCK, id);
+        ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, id);
+
+        // 3. Create the block instance with the key already inside its settings
+        Block block = blockFactory.apply(settings.setId(blockKey));
+
+        // 4. Register the Block
+        Registry.register(BuiltInRegistries.BLOCK, blockKey, block);
+
+        // 5. Register the BlockItem with the item key and the block description prefix
+        Registry.register(BuiltInRegistries.ITEM, itemKey,
+                new BlockItem(block, new Item.Properties().setId(itemKey).useBlockDescriptionPrefix()));
+
+        return block;
+    }
+
     public static void registerBlocks() {
         TBS.LOGGER.info("Registering Mod Blocks for " + TBS.MOD_ID);
 
         //Creative Tabs
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.NATURAL_BLOCKS).register(entries -> {
-            entries.accept(TBSBlocks.CHERRY_BIRCH_LEAVES);
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.NATURAL_BLOCKS).register(natural -> {
+            //entries.insertAfter(Blocks.BIRCH_LEAVES, TBSBlocks.CHERRY_BIRCH_LEAVES);
             //entries.accept(TBSBlocks.CHERRY_BIRCH_SAPLING);
-            entries.accept(TBSBlocks.GOLDEN_BIRCH_LEAVES);
+            //entries.insertAfter(TBSBlocks.CHERRY_BIRCH_LEAVES, TBSBlocks.GOLDEN_BIRCH_LEAVES);
             //entries.accept(TBSBlocks.GOLDEN_BIRCH_SAPLING);
+            natural.insertAfter(Blocks.RAW_GOLD_BLOCK, TBSBlocks.RAW_BYZANTIUM_BLOCK);
+            natural.insertAfter(Blocks.DEEPSLATE_GOLD_ORE, TBSBlocks.BYZANTIUM_ORE);
+            natural.insertAfter(TBSBlocks.BYZANTIUM_ORE, TBSBlocks.DEEPSLATE_BYZANTIUM_ORE);
+            natural.insertAfter(TBSBlocks.DEEPSLATE_BYZANTIUM_ORE, Blocks.REDSTONE_ORE);
+            natural.insertAfter(Blocks.ANCIENT_DEBRIS, TBSBlocks.GOLDEN_DEBRIS);
         });
 
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS).register(entries -> {
-            entries.accept(PLANKS_TEMPLATE);
-            entries.accept(WHITE_PLANKS);
-            entries.accept(WHITE_STAIRS);
-            entries.accept(WHITE_SLAB);
-            entries.accept(WHITE_FENCE);
-            entries.accept(WHITE_FENCE_GATE);
-            entries.accept(WHITE_DOOR);
-            entries.accept(WHITE_TRAPDOOR);
-            entries.accept(WHITE_PRESSURE_PLATE);
-            entries.accept(WHITE_BUTTON);
-            entries.accept(LIGHT_GRAY_PLANKS);
-            entries.accept(LIGHT_GRAY_STAIRS);
-            entries.accept(LIGHT_GRAY_SLAB);
-            entries.accept(LIGHT_GRAY_FENCE);
-            entries.accept(LIGHT_GRAY_FENCE_GATE);
-            entries.accept(LIGHT_GRAY_DOOR);
-            entries.accept(LIGHT_GRAY_TRAPDOOR);
-            entries.accept(LIGHT_GRAY_PRESSURE_PLATE);
-            entries.accept(LIGHT_GRAY_BUTTON);
-            entries.accept(GRAY_PLANKS);
-            entries.accept(GRAY_STAIRS);
-            entries.accept(GRAY_SLAB);
-            entries.accept(GRAY_FENCE);
-            entries.accept(GRAY_FENCE_GATE);
-            entries.accept(GRAY_DOOR);
-            entries.accept(GRAY_TRAPDOOR);
-            entries.accept(GRAY_PRESSURE_PLATE);
-            entries.accept(GRAY_BUTTON);
-            entries.accept(BLACK_PLANKS);
-            entries.accept(BLACK_STAIRS);
-            entries.accept(BLACK_SLAB);
-            entries.accept(BLACK_FENCE);
-            entries.accept(BLACK_FENCE_GATE);
-            entries.accept(BLACK_DOOR);
-            entries.accept(BLACK_TRAPDOOR);
-            entries.accept(BLACK_PRESSURE_PLATE);
-            entries.accept(BLACK_BUTTON);
-            entries.accept(BROWN_PLANKS);
-            entries.accept(BROWN_STAIRS);
-            entries.accept(BROWN_SLAB);
-            entries.accept(BROWN_FENCE);
-            entries.accept(BROWN_FENCE_GATE);
-            entries.accept(BROWN_DOOR);
-            entries.accept(BROWN_TRAPDOOR);
-            entries.accept(BROWN_PRESSURE_PLATE);
-            entries.accept(BROWN_BUTTON);
-            entries.accept(RED_PLANKS);
-            entries.accept(RED_STAIRS);
-            entries.accept(RED_SLAB);
-            entries.accept(RED_FENCE);
-            entries.accept(RED_FENCE_GATE);
-            entries.accept(RED_DOOR);
-            entries.accept(RED_TRAPDOOR);
-            entries.accept(RED_PRESSURE_PLATE);
-            entries.accept(RED_BUTTON);
-            entries.accept(ORANGE_PLANKS);
-            entries.accept(ORANGE_STAIRS);
-            entries.accept(ORANGE_SLAB);
-            entries.accept(ORANGE_FENCE);
-            entries.accept(ORANGE_FENCE_GATE);
-            entries.accept(ORANGE_DOOR);
-            entries.accept(ORANGE_TRAPDOOR);
-            entries.accept(ORANGE_PRESSURE_PLATE);
-            entries.accept(ORANGE_BUTTON);
-            entries.accept(YELLOW_PLANKS);
-            entries.accept(YELLOW_STAIRS);
-            entries.accept(YELLOW_SLAB);
-            entries.accept(YELLOW_FENCE);
-            entries.accept(YELLOW_FENCE_GATE);
-            entries.accept(YELLOW_DOOR);
-            entries.accept(YELLOW_TRAPDOOR);
-            entries.accept(YELLOW_PRESSURE_PLATE);
-            entries.accept(YELLOW_BUTTON);
-            entries.accept(LIME_PLANKS);
-            entries.accept(LIME_STAIRS);
-            entries.accept(LIME_SLAB);
-            entries.accept(LIME_FENCE);
-            entries.accept(LIME_FENCE_GATE);
-            entries.accept(LIME_DOOR);
-            entries.accept(LIME_TRAPDOOR);
-            entries.accept(LIME_PRESSURE_PLATE);
-            entries.accept(LIME_BUTTON);
-            entries.accept(GREEN_PLANKS);
-            entries.accept(GREEN_STAIRS);
-            entries.accept(GREEN_SLAB);
-            entries.accept(GREEN_FENCE);
-            entries.accept(GREEN_FENCE_GATE);
-            entries.accept(GREEN_DOOR);
-            entries.accept(GREEN_TRAPDOOR);
-            entries.accept(GREEN_PRESSURE_PLATE);
-            entries.accept(GREEN_BUTTON);
-            entries.accept(CYAN_PLANKS);
-            entries.accept(CYAN_STAIRS);
-            entries.accept(CYAN_SLAB);
-            entries.accept(CYAN_FENCE);
-            entries.accept(CYAN_FENCE_GATE);
-            entries.accept(CYAN_DOOR);
-            entries.accept(CYAN_TRAPDOOR);
-            entries.accept(CYAN_PRESSURE_PLATE);
-            entries.accept(CYAN_BUTTON);
-            entries.accept(LIGHT_BLUE_PLANKS);
-            entries.accept(LIGHT_BLUE_STAIRS);
-            entries.accept(LIGHT_BLUE_SLAB);
-            entries.accept(LIGHT_BLUE_FENCE);
-            entries.accept(LIGHT_BLUE_FENCE_GATE);
-            entries.accept(LIGHT_BLUE_DOOR);
-            entries.accept(LIGHT_BLUE_TRAPDOOR);
-            entries.accept(LIGHT_BLUE_PRESSURE_PLATE);
-            entries.accept(LIGHT_BLUE_BUTTON);
-            entries.accept(BLUE_PLANKS);
-            entries.accept(BLUE_STAIRS);
-            entries.accept(BLUE_SLAB);
-            entries.accept(BLUE_FENCE);
-            entries.accept(BLUE_FENCE_GATE);
-            entries.accept(BLUE_DOOR);
-            entries.accept(BLUE_TRAPDOOR);
-            entries.accept(BLUE_PRESSURE_PLATE);
-            entries.accept(BLUE_BUTTON);
-            entries.accept(PURPLE_PLANKS);
-            entries.accept(PURPLE_STAIRS);
-            entries.accept(PURPLE_SLAB);
-            entries.accept(PURPLE_FENCE);
-            entries.accept(PURPLE_FENCE_GATE);
-            entries.accept(PURPLE_DOOR);
-            entries.accept(PURPLE_TRAPDOOR);
-            entries.accept(PURPLE_PRESSURE_PLATE);
-            entries.accept(PURPLE_BUTTON);
-            entries.accept(MAGENTA_PLANKS);
-            entries.accept(MAGENTA_STAIRS);
-            entries.accept(MAGENTA_SLAB);
-            entries.accept(MAGENTA_FENCE);
-            entries.accept(MAGENTA_FENCE_GATE);
-            entries.accept(MAGENTA_DOOR);
-            entries.accept(MAGENTA_TRAPDOOR);
-            entries.accept(MAGENTA_PRESSURE_PLATE);
-            entries.accept(MAGENTA_BUTTON);
-            entries.accept(PINK_PLANKS);
-            entries.accept(PINK_STAIRS);
-            entries.accept(PINK_SLAB);
-            entries.accept(PINK_FENCE);
-            entries.accept(PINK_FENCE_GATE);
-            entries.accept(PINK_DOOR);
-            entries.accept(PINK_TRAPDOOR);
-            entries.accept(PINK_PRESSURE_PLATE);
-            entries.accept(PINK_BUTTON);
-            entries.accept(DARK_OAK_DOOR_WITH_WINDOWS);
-            entries.accept(DARK_OAK_TRAPDOOR_WITH_WINDOWS);
-            entries.accept(STONE_DOOR);
-            entries.accept(STONE_TRAPDOOR);
-            entries.accept(BEDROCK_DOOR);
-            entries.accept(BEDROCK_TRAPDOOR);
-            entries.accept(OBSIDIAN_DOOR);
-            entries.accept(OBSIDIAN_TRAPDOOR);
-            entries.accept(CHERRY_BIRCH_PLANKS);
-            entries.accept(CHERRY_BIRCH_STAIRS);
-            entries.accept(CHERRY_BIRCH_SLAB);
-            entries.accept(CHERRY_BIRCH_FENCE);
-            entries.accept(CHERRY_BIRCH_FENCE_GATE);
-            entries.accept(CHERRY_BIRCH_DOOR);
-            entries.accept(CHERRY_BIRCH_TRAPDOOR);
-            entries.accept(CHERRY_BIRCH_PRESSURE_PLATE);
-            entries.accept(CHERRY_BIRCH_BUTTON);
-            entries.accept(GOLDEN_BIRCH_PLANKS);
-            entries.accept(GOLDEN_BIRCH_STAIRS);
-            entries.accept(GOLDEN_BIRCH_SLAB);
-            entries.accept(GOLDEN_BIRCH_FENCE);
-            entries.accept(GOLDEN_BIRCH_FENCE_GATE);
-            entries.accept(GOLDEN_BIRCH_DOOR);
-            entries.accept(GOLDEN_BIRCH_TRAPDOOR);
-            entries.accept(GOLDEN_BIRCH_PRESSURE_PLATE);
-            entries.accept(GOLDEN_BIRCH_BUTTON);
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS).register(building -> {
+            building.insertAfter(Blocks.BIRCH_BUTTON, TBSBlocks.CHERRY_BIRCH_LOG);
+            building.insertAfter(TBSBlocks.CHERRY_BIRCH_LOG, TBSBlocks.CHERRY_BIRCH_WOOD);
+            building.insertAfter(TBSBlocks.CHERRY_BIRCH_WOOD, TBSBlocks.STRIPPED_CHERRY_BIRCH_LOG);
+            building.insertAfter(TBSBlocks.STRIPPED_CHERRY_BIRCH_LOG, TBSBlocks.STRIPPED_CHERRY_BIRCH_WOOD);
+            building.insertAfter(TBSBlocks.STRIPPED_CHERRY_BIRCH_WOOD, TBSBlocks.CHERRY_BIRCH_PLANKS);
+            building.insertAfter(TBSBlocks.CHERRY_BIRCH_PLANKS, TBSBlocks.CHERRY_BIRCH_STAIRS);
+            building.insertAfter(TBSBlocks.CHERRY_BIRCH_STAIRS, TBSBlocks.CHERRY_BIRCH_SLAB);
+            building.insertAfter(TBSBlocks.CHERRY_BIRCH_SLAB, TBSBlocks.CHERRY_BIRCH_FENCE);
+            building.insertAfter(TBSBlocks.CHERRY_BIRCH_FENCE, TBSBlocks.CHERRY_BIRCH_FENCE_GATE);
+            building.insertAfter(TBSBlocks.CHERRY_BIRCH_FENCE_GATE, TBSBlocks.CHERRY_BIRCH_DOOR);
+            building.insertAfter(TBSBlocks.CHERRY_BIRCH_DOOR, TBSBlocks.CHERRY_BIRCH_TRAPDOOR);
+            building.insertAfter(TBSBlocks.CHERRY_BIRCH_TRAPDOOR, TBSBlocks.CHERRY_BIRCH_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.CHERRY_BIRCH_PRESSURE_PLATE, TBSBlocks.CHERRY_BIRCH_BUTTON);
+            building.insertAfter(TBSBlocks.CHERRY_BIRCH_BUTTON, TBSBlocks.GOLDEN_BIRCH_LOG);
+            building.insertAfter(TBSBlocks.GOLDEN_BIRCH_LOG, TBSBlocks.GOLDEN_BIRCH_WOOD);
+            building.insertAfter(TBSBlocks.GOLDEN_BIRCH_WOOD, TBSBlocks.STRIPPED_GOLDEN_BIRCH_LOG);
+            building.insertAfter(TBSBlocks.STRIPPED_GOLDEN_BIRCH_LOG, TBSBlocks.STRIPPED_GOLDEN_BIRCH_WOOD);
+            building.insertAfter(TBSBlocks.STRIPPED_GOLDEN_BIRCH_WOOD, TBSBlocks.GOLDEN_BIRCH_PLANKS);
+            building.insertAfter(TBSBlocks.GOLDEN_BIRCH_PLANKS, TBSBlocks.GOLDEN_BIRCH_STAIRS);
+            building.insertAfter(TBSBlocks.GOLDEN_BIRCH_STAIRS, TBSBlocks.GOLDEN_BIRCH_SLAB);
+            building.insertAfter(TBSBlocks.GOLDEN_BIRCH_SLAB, TBSBlocks.GOLDEN_BIRCH_FENCE);
+            building.insertAfter(TBSBlocks.GOLDEN_BIRCH_FENCE, TBSBlocks.GOLDEN_BIRCH_FENCE_GATE);
+            building.insertAfter(TBSBlocks.GOLDEN_BIRCH_FENCE_GATE, TBSBlocks.GOLDEN_BIRCH_DOOR);
+            building.insertAfter(TBSBlocks.GOLDEN_BIRCH_DOOR, TBSBlocks.GOLDEN_BIRCH_TRAPDOOR);
+            building.insertAfter(TBSBlocks.GOLDEN_BIRCH_TRAPDOOR, TBSBlocks.GOLDEN_BIRCH_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.GOLDEN_BIRCH_PRESSURE_PLATE, TBSBlocks.GOLDEN_BIRCH_BUTTON);
+            building.insertAfter(Blocks.DARK_OAK_TRAPDOOR, TBSBlocks.DARK_OAK_DOOR_WITH_WINDOWS);
+            building.insertAfter(TBSBlocks.DARK_OAK_DOOR_WITH_WINDOWS, TBSBlocks.DARK_OAK_TRAPDOOR_WITH_WINDOWS);
+            building.insertAfter(Blocks.WARPED_BUTTON, TBSBlocks.CRIPTION_STEM);
+            building.insertAfter(TBSBlocks.CRIPTION_STEM, TBSBlocks.STRIPPED_CRIPTION_STEM);
+            building.insertAfter(TBSBlocks.STRIPPED_CRIPTION_STEM, TBSBlocks.CRIPTION_HYPHAE);
+            building.insertAfter(TBSBlocks.CRIPTION_HYPHAE, TBSBlocks.STRIPPED_CRIPTION_HYPHAE);
+            building.insertAfter(TBSBlocks.STRIPPED_CRIPTION_HYPHAE, TBSBlocks.CRIPTION_PLANKS);
+            building.insertAfter(TBSBlocks.CRIPTION_PLANKS, TBSBlocks.CRIPTION_STAIRS);
+            building.insertAfter(TBSBlocks.CRIPTION_STAIRS, TBSBlocks.CRIPTION_SLAB);
+            building.insertAfter(TBSBlocks.CRIPTION_SLAB, TBSBlocks.CRIPTION_FENCE);
+            building.insertAfter(TBSBlocks.CRIPTION_FENCE, TBSBlocks.CRIPTION_FENCE_GATE);
+            building.insertAfter(TBSBlocks.CRIPTION_FENCE_GATE, TBSBlocks.CRIPTION_DOOR);
+            building.insertAfter(TBSBlocks.CRIPTION_DOOR, TBSBlocks.CRIPTION_TRAPDOOR);
+            building.insertAfter(TBSBlocks.CRIPTION_TRAPDOOR, TBSBlocks.CRIPTION_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.CRIPTION_PRESSURE_PLATE, TBSBlocks.CRIPTION_BUTTON);
+            building.insertAfter(TBSBlocks.CRIPTION_BUTTON, TBSBlocks.PLANKS_TEMPLATE);
+            building.insertAfter(TBSBlocks.PLANKS_TEMPLATE, TBSBlocks.WHITE_PLANKS);
+            building.insertAfter(TBSBlocks.WHITE_PLANKS, TBSBlocks.WHITE_STAIRS);
+            building.insertAfter(TBSBlocks.WHITE_STAIRS, TBSBlocks.WHITE_SLAB);
+            building.insertAfter(TBSBlocks.WHITE_SLAB, TBSBlocks.WHITE_FENCE);
+            building.insertAfter(TBSBlocks.WHITE_FENCE, TBSBlocks.WHITE_FENCE_GATE);
+            building.insertAfter(TBSBlocks.WHITE_FENCE_GATE, TBSBlocks.WHITE_DOOR);
+            building.insertAfter(TBSBlocks.WHITE_DOOR, TBSBlocks.WHITE_TRAPDOOR);
+            building.insertAfter(TBSBlocks.WHITE_TRAPDOOR, TBSBlocks.WHITE_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.WHITE_PRESSURE_PLATE, TBSBlocks.WHITE_BUTTON);
+            building.insertAfter(TBSBlocks.WHITE_BUTTON, TBSBlocks.LIGHT_GRAY_PLANKS);
+            building.insertAfter(TBSBlocks.LIGHT_GRAY_PLANKS, TBSBlocks.LIGHT_GRAY_STAIRS);
+            building.insertAfter(TBSBlocks.LIGHT_GRAY_STAIRS, TBSBlocks.LIGHT_GRAY_SLAB);
+            building.insertAfter(TBSBlocks.LIGHT_GRAY_SLAB, TBSBlocks.LIGHT_GRAY_FENCE);
+            building.insertAfter(TBSBlocks.LIGHT_GRAY_FENCE, TBSBlocks.LIGHT_GRAY_FENCE_GATE);
+            building.insertAfter(TBSBlocks.LIGHT_GRAY_FENCE_GATE, TBSBlocks.LIGHT_GRAY_DOOR);
+            building.insertAfter(TBSBlocks.LIGHT_GRAY_DOOR, TBSBlocks.LIGHT_GRAY_TRAPDOOR);
+            building.insertAfter(TBSBlocks.LIGHT_GRAY_TRAPDOOR, TBSBlocks.LIGHT_GRAY_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.LIGHT_GRAY_PRESSURE_PLATE, TBSBlocks.LIGHT_GRAY_BUTTON);
+            building.insertAfter(TBSBlocks.LIGHT_GRAY_BUTTON, TBSBlocks.GRAY_PLANKS);
+            building.insertAfter(TBSBlocks.GRAY_PLANKS, TBSBlocks.GRAY_STAIRS);
+            building.insertAfter(TBSBlocks.GRAY_STAIRS, TBSBlocks.GRAY_SLAB);
+            building.insertAfter(TBSBlocks.GRAY_SLAB, TBSBlocks.GRAY_FENCE);
+            building.insertAfter(TBSBlocks.GRAY_FENCE, TBSBlocks.GRAY_FENCE_GATE);
+            building.insertAfter(TBSBlocks.GRAY_FENCE_GATE, TBSBlocks.GRAY_DOOR);
+            building.insertAfter(TBSBlocks.GRAY_DOOR, TBSBlocks.GRAY_TRAPDOOR);
+            building.insertAfter(TBSBlocks.GRAY_TRAPDOOR, TBSBlocks.GRAY_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.GRAY_PRESSURE_PLATE, TBSBlocks.GRAY_BUTTON);
+            building.insertAfter(TBSBlocks.GRAY_BUTTON, TBSBlocks.BLACK_PLANKS);
+            building.insertAfter(TBSBlocks.BLACK_PLANKS, TBSBlocks.BLACK_STAIRS);
+            building.insertAfter(TBSBlocks.BLACK_STAIRS, TBSBlocks.BLACK_SLAB);
+            building.insertAfter(TBSBlocks.BLACK_SLAB, TBSBlocks.BLACK_FENCE);
+            building.insertAfter(TBSBlocks.BLACK_FENCE, TBSBlocks.BLACK_FENCE_GATE);
+            building.insertAfter(TBSBlocks.BLACK_FENCE_GATE, TBSBlocks.BLACK_DOOR);
+            building.insertAfter(TBSBlocks.BLACK_DOOR, TBSBlocks.BLACK_TRAPDOOR);
+            building.insertAfter(TBSBlocks.BLACK_TRAPDOOR, TBSBlocks.BLACK_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.BLACK_PRESSURE_PLATE, TBSBlocks.BLACK_BUTTON);
+            building.insertAfter(TBSBlocks.BLACK_BUTTON, TBSBlocks.BROWN_PLANKS);
+            building.insertAfter(TBSBlocks.BROWN_PLANKS, TBSBlocks.BROWN_STAIRS);
+            building.insertAfter(TBSBlocks.BROWN_STAIRS, TBSBlocks.BROWN_SLAB);
+            building.insertAfter(TBSBlocks.BROWN_SLAB, TBSBlocks.BROWN_FENCE);
+            building.insertAfter(TBSBlocks.BROWN_FENCE, TBSBlocks.BROWN_FENCE_GATE);
+            building.insertAfter(TBSBlocks.BROWN_FENCE_GATE, TBSBlocks.BROWN_DOOR);
+            building.insertAfter(TBSBlocks.BROWN_DOOR, TBSBlocks.BROWN_TRAPDOOR);
+            building.insertAfter(TBSBlocks.BROWN_TRAPDOOR, TBSBlocks.BROWN_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.BROWN_PRESSURE_PLATE, TBSBlocks.BROWN_BUTTON);
+            building.insertAfter(TBSBlocks.BROWN_BUTTON, TBSBlocks.RED_PLANKS);
+            building.insertAfter(TBSBlocks.RED_PLANKS, TBSBlocks.RED_STAIRS);
+            building.insertAfter(TBSBlocks.RED_STAIRS, TBSBlocks.RED_SLAB);
+            building.insertAfter(TBSBlocks.RED_SLAB, TBSBlocks.RED_FENCE);
+            building.insertAfter(TBSBlocks.RED_FENCE, TBSBlocks.RED_FENCE_GATE);
+            building.insertAfter(TBSBlocks.RED_FENCE_GATE, TBSBlocks.RED_DOOR);
+            building.insertAfter(TBSBlocks.RED_DOOR, TBSBlocks.RED_TRAPDOOR);
+            building.insertAfter(TBSBlocks.RED_TRAPDOOR, TBSBlocks.RED_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.RED_PRESSURE_PLATE, TBSBlocks.RED_BUTTON);
+            building.insertAfter(TBSBlocks.RED_BUTTON, TBSBlocks.ORANGE_PLANKS);
+            building.insertAfter(TBSBlocks.ORANGE_PLANKS, TBSBlocks.ORANGE_STAIRS);
+            building.insertAfter(TBSBlocks.ORANGE_STAIRS, TBSBlocks.ORANGE_SLAB);
+            building.insertAfter(TBSBlocks.ORANGE_SLAB, TBSBlocks.ORANGE_FENCE);
+            building.insertAfter(TBSBlocks.ORANGE_FENCE, TBSBlocks.ORANGE_FENCE_GATE);
+            building.insertAfter(TBSBlocks.ORANGE_FENCE_GATE, TBSBlocks.ORANGE_DOOR);
+            building.insertAfter(TBSBlocks.ORANGE_DOOR, TBSBlocks.ORANGE_TRAPDOOR);
+            building.insertAfter(TBSBlocks.ORANGE_TRAPDOOR, TBSBlocks.ORANGE_TRAPDOOR);
+            building.insertAfter(TBSBlocks.ORANGE_TRAPDOOR, TBSBlocks.ORANGE_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.ORANGE_PRESSURE_PLATE, TBSBlocks.ORANGE_BUTTON);
+            building.insertAfter(TBSBlocks.ORANGE_BUTTON, TBSBlocks.YELLOW_PLANKS);
+            building.insertAfter(TBSBlocks.YELLOW_PLANKS, TBSBlocks.YELLOW_STAIRS);
+            building.insertAfter(TBSBlocks.YELLOW_STAIRS, TBSBlocks.YELLOW_SLAB);
+            building.insertAfter(TBSBlocks.YELLOW_SLAB, TBSBlocks.YELLOW_FENCE);
+            building.insertAfter(TBSBlocks.YELLOW_FENCE, TBSBlocks.YELLOW_FENCE_GATE);
+            building.insertAfter(TBSBlocks.YELLOW_FENCE_GATE, TBSBlocks.YELLOW_DOOR);
+            building.insertAfter(TBSBlocks.YELLOW_DOOR, TBSBlocks.YELLOW_TRAPDOOR);
+            building.insertAfter(TBSBlocks.YELLOW_TRAPDOOR, TBSBlocks.YELLOW_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.YELLOW_PRESSURE_PLATE, TBSBlocks.YELLOW_BUTTON);
+            building.insertAfter(TBSBlocks.YELLOW_BUTTON, TBSBlocks.LIME_PLANKS);
+            building.insertAfter(TBSBlocks.LIME_PLANKS, TBSBlocks.LIME_STAIRS);
+            building.insertAfter(TBSBlocks.LIME_STAIRS, TBSBlocks.LIME_SLAB);
+            building.insertAfter(TBSBlocks.LIME_SLAB, TBSBlocks.LIME_FENCE);
+            building.insertAfter(TBSBlocks.LIME_FENCE, TBSBlocks.LIME_FENCE_GATE);
+            building.insertAfter(TBSBlocks.LIME_FENCE_GATE, TBSBlocks.LIME_DOOR);
+            building.insertAfter(TBSBlocks.LIME_DOOR, TBSBlocks.LIME_TRAPDOOR);
+            building.insertAfter(TBSBlocks.LIME_TRAPDOOR, TBSBlocks.LIME_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.LIME_PRESSURE_PLATE, TBSBlocks.LIME_BUTTON);
+            building.insertAfter(TBSBlocks.LIME_BUTTON, TBSBlocks.GREEN_PLANKS);
+            building.insertAfter(TBSBlocks.GREEN_PLANKS, TBSBlocks.GREEN_STAIRS);
+            building.insertAfter(TBSBlocks.GREEN_STAIRS, TBSBlocks.GREEN_SLAB);
+            building.insertAfter(TBSBlocks.GREEN_SLAB, TBSBlocks.GREEN_FENCE);
+            building.insertAfter(TBSBlocks.GREEN_FENCE, TBSBlocks.GREEN_FENCE_GATE);
+            building.insertAfter(TBSBlocks.GREEN_FENCE_GATE, TBSBlocks.GREEN_DOOR);
+            building.insertAfter(TBSBlocks.GREEN_DOOR, TBSBlocks.GREEN_TRAPDOOR);
+            building.insertAfter(TBSBlocks.GREEN_TRAPDOOR, TBSBlocks.GREEN_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.GREEN_PRESSURE_PLATE, TBSBlocks.GREEN_BUTTON);
+            building.insertAfter(TBSBlocks.GREEN_BUTTON, TBSBlocks.CYAN_PLANKS);
+            building.insertAfter(TBSBlocks.CYAN_PLANKS, TBSBlocks.CYAN_STAIRS);
+            building.insertAfter(TBSBlocks.CYAN_STAIRS, TBSBlocks.CYAN_SLAB);
+            building.insertAfter(TBSBlocks.CYAN_SLAB, TBSBlocks.CYAN_FENCE);
+            building.insertAfter(TBSBlocks.CYAN_FENCE, TBSBlocks.CYAN_FENCE_GATE);
+            building.insertAfter(TBSBlocks.CYAN_FENCE_GATE, TBSBlocks.CYAN_DOOR);
+            building.insertAfter(TBSBlocks.CYAN_DOOR, TBSBlocks.CYAN_TRAPDOOR);
+            building.insertAfter(TBSBlocks.CYAN_TRAPDOOR, TBSBlocks.CYAN_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.CYAN_PRESSURE_PLATE, TBSBlocks.CYAN_BUTTON);
+            building.insertAfter(TBSBlocks.CYAN_BUTTON, TBSBlocks.LIGHT_BLUE_PLANKS);
+            building.insertAfter(TBSBlocks.LIGHT_BLUE_PLANKS, TBSBlocks.LIGHT_BLUE_STAIRS);
+            building.insertAfter(TBSBlocks.LIGHT_BLUE_STAIRS, TBSBlocks.LIGHT_BLUE_SLAB);
+            building.insertAfter(TBSBlocks.LIGHT_BLUE_SLAB, TBSBlocks.LIGHT_BLUE_FENCE);
+            building.insertAfter(TBSBlocks.LIGHT_BLUE_FENCE, TBSBlocks.LIGHT_BLUE_FENCE_GATE);
+            building.insertAfter(TBSBlocks.LIGHT_BLUE_FENCE_GATE, TBSBlocks.LIGHT_BLUE_DOOR);
+            building.insertAfter(TBSBlocks.LIGHT_BLUE_DOOR, TBSBlocks.LIGHT_BLUE_TRAPDOOR);
+            building.insertAfter(TBSBlocks.LIGHT_BLUE_TRAPDOOR, TBSBlocks.LIGHT_BLUE_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.LIGHT_BLUE_PRESSURE_PLATE, TBSBlocks.LIGHT_BLUE_BUTTON);
+            building.insertAfter(TBSBlocks.LIGHT_BLUE_BUTTON, TBSBlocks.BLUE_PLANKS);
+            building.insertAfter(TBSBlocks.BLUE_PLANKS, TBSBlocks.BLUE_STAIRS);
+            building.insertAfter(TBSBlocks.BLUE_STAIRS, TBSBlocks.BLUE_SLAB);
+            building.insertAfter(TBSBlocks.BLUE_SLAB, TBSBlocks.BLUE_FENCE);
+            building.insertAfter(TBSBlocks.BLUE_FENCE, TBSBlocks.BLUE_FENCE_GATE);
+            building.insertAfter(TBSBlocks.BLUE_FENCE_GATE, TBSBlocks.BLUE_DOOR);
+            building.insertAfter(TBSBlocks.BLUE_DOOR, TBSBlocks.BLUE_TRAPDOOR);
+            building.insertAfter(TBSBlocks.BLUE_TRAPDOOR, TBSBlocks.BLUE_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.BLUE_PRESSURE_PLATE, TBSBlocks.BLUE_BUTTON);
+            building.insertAfter(TBSBlocks.BLUE_BUTTON, TBSBlocks.PURPLE_PLANKS);
+            building.insertAfter(TBSBlocks.PURPLE_PLANKS, TBSBlocks.PURPLE_STAIRS);
+            building.insertAfter(TBSBlocks.PURPLE_STAIRS, TBSBlocks.PURPLE_SLAB);
+            building.insertAfter(TBSBlocks.PURPLE_SLAB, TBSBlocks.PURPLE_FENCE);
+            building.insertAfter(TBSBlocks.PURPLE_FENCE, TBSBlocks.PURPLE_FENCE_GATE);
+            building.insertAfter(TBSBlocks.PURPLE_FENCE_GATE, TBSBlocks.PURPLE_DOOR);
+            building.insertAfter(TBSBlocks.PURPLE_DOOR, TBSBlocks.PURPLE_TRAPDOOR);
+            building.insertAfter(TBSBlocks.PURPLE_TRAPDOOR, TBSBlocks.PURPLE_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.PURPLE_PRESSURE_PLATE, TBSBlocks.PURPLE_BUTTON);
+            building.insertAfter(TBSBlocks.PURPLE_BUTTON, TBSBlocks.MAGENTA_PLANKS);
+            building.insertAfter(TBSBlocks.MAGENTA_PLANKS, TBSBlocks.MAGENTA_STAIRS);
+            building.insertAfter(TBSBlocks.MAGENTA_STAIRS, TBSBlocks.MAGENTA_SLAB);
+            building.insertAfter(TBSBlocks.MAGENTA_SLAB, TBSBlocks.MAGENTA_FENCE);
+            building.insertAfter(TBSBlocks.MAGENTA_FENCE, TBSBlocks.MAGENTA_FENCE_GATE);
+            building.insertAfter(TBSBlocks.MAGENTA_FENCE_GATE, TBSBlocks.MAGENTA_DOOR);
+            building.insertAfter(TBSBlocks.MAGENTA_DOOR, TBSBlocks.MAGENTA_TRAPDOOR);
+            building.insertAfter(TBSBlocks.MAGENTA_TRAPDOOR, TBSBlocks.MAGENTA_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.MAGENTA_PRESSURE_PLATE, TBSBlocks.MAGENTA_BUTTON);
+            building.insertAfter(TBSBlocks.MAGENTA_BUTTON, TBSBlocks.PINK_PLANKS);
+            building.insertAfter(TBSBlocks.PINK_PLANKS, TBSBlocks.PINK_STAIRS);
+            building.insertAfter(TBSBlocks.PINK_STAIRS, TBSBlocks.PINK_SLAB);
+            building.insertAfter(TBSBlocks.PINK_SLAB, TBSBlocks.PINK_FENCE);
+            building.insertAfter(TBSBlocks.PINK_FENCE, TBSBlocks.PINK_FENCE_GATE);
+            building.insertAfter(TBSBlocks.PINK_FENCE_GATE, TBSBlocks.PINK_DOOR);
+            building.insertAfter(TBSBlocks.PINK_DOOR, TBSBlocks.PINK_TRAPDOOR);
+            building.insertAfter(TBSBlocks.PINK_TRAPDOOR, TBSBlocks.PINK_PRESSURE_PLATE);
+            building.insertAfter(TBSBlocks.PINK_PRESSURE_PLATE, TBSBlocks.PINK_BUTTON);
+            building.insertAfter(Blocks.IRON_TRAPDOOR, TBSBlocks.STONE_DOOR);
+            building.insertAfter(TBSBlocks.STONE_DOOR, TBSBlocks.STONE_TRAPDOOR);
+            building.insertAfter(TBSBlocks.STONE_TRAPDOOR, TBSBlocks.BEDROCK_DOOR);
+            building.insertAfter(TBSBlocks.BEDROCK_DOOR, TBSBlocks.BEDROCK_TRAPDOOR);
+            building.insertAfter(TBSBlocks.BEDROCK_TRAPDOOR, TBSBlocks.OBSIDIAN_DOOR);
+            building.insertAfter(TBSBlocks.OBSIDIAN_DOOR, TBSBlocks.OBSIDIAN_TRAPDOOR);
+            building.insertAfter(Blocks.LIGHT_WEIGHTED_PRESSURE_PLATE, TBSBlocks.BYZANTIUM_BLOCK);
+            building.insertAfter(Blocks.NETHERITE_BLOCK, TBSBlocks.DIAMARITE_BLOCK);
+            building.insertAfter(TBSBlocks.DIAMARITE_BLOCK, TBSBlocks.CORRUPTIONITE_BLOCK);
+            building.insertAfter(TBSBlocks.CORRUPTIONITE_BLOCK, TBSBlocks.GILDED_NETHERITE_BLOCK);
+        });
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(functional -> {
+            functional.insertAfter(Blocks.BIRCH_SHELF, TBSBlocks.CHERRY_BIRCH_SHELF);
+            functional.insertAfter(TBSBlocks.CHERRY_BIRCH_SHELF, TBSBlocks.GOLDEN_BIRCH_SHELF);
+            functional.insertAfter(Blocks.WARPED_SHELF, TBSBlocks.CRIPTION_SHELF);
+            functional.insertAfter(TBSBlocks.CRIPTION_SHELF, TBSBlocks.WHITE_SHELF);
+            functional.insertAfter(TBSBlocks.WHITE_SHELF, TBSBlocks.LIGHT_GRAY_SHELF);
+            functional.insertAfter(TBSBlocks.LIGHT_GRAY_SHELF, TBSBlocks.GRAY_SHELF);
+            functional.insertAfter(TBSBlocks.GRAY_SHELF, TBSBlocks.BLACK_SHELF);
+            functional.insertAfter(TBSBlocks.BLACK_SHELF, TBSBlocks.BROWN_SHELF);
+            functional.insertAfter(TBSBlocks.BROWN_SHELF, TBSBlocks.RED_SHELF);
+            functional.insertAfter(TBSBlocks.RED_SHELF, TBSBlocks.ORANGE_SHELF);
+            functional.insertAfter(TBSBlocks.ORANGE_SHELF, TBSBlocks.YELLOW_SHELF);
+            functional.insertAfter(TBSBlocks.YELLOW_SHELF, TBSBlocks.LIME_SHELF);
+            functional.insertAfter(TBSBlocks.LIME_SHELF, TBSBlocks.GREEN_SHELF);
+            functional.insertAfter(TBSBlocks.GREEN_SHELF, TBSBlocks.CYAN_SHELF);
+            functional.insertAfter(TBSBlocks.CYAN_SHELF, TBSBlocks.LIGHT_BLUE_SHELF);
+            functional.insertAfter(TBSBlocks.LIGHT_BLUE_SHELF, TBSBlocks.BLUE_SHELF);
+            functional.insertAfter(TBSBlocks.BLUE_SHELF, TBSBlocks.PURPLE_SHELF);
+            functional.insertAfter(TBSBlocks.PURPLE_SHELF, TBSBlocks.MAGENTA_SHELF);
+            functional.insertAfter(TBSBlocks.MAGENTA_SHELF, TBSBlocks.PINK_SHELF);
+            functional.insertAfter(TBSBlocks.PINK_SHELF, TBSBlocks.SHELFSHELF);
+        });
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(ingredients -> {
+            ingredients.insertAfter(Blocks.HEAVY_CORE, TBSBlocks.DIAMARITE_CORE);
         });
     }
 }
